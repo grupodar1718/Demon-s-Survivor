@@ -1,0 +1,31 @@
+﻿title Diagrama de Estados
+
+Menú->Partida: Jugar()
+Partida->Menú: Atras()
+
+Menú->Opciones: Opciones()
+Opciones->Menú: Atras()
+
+
+
+Menú->Créditos: Créditos()
+Créditos->Menú: Atras()
+
+Partida->Selección de nivel: 1 Jugador()
+Partida->Selección de nivel: 2 Jugadores(Sólo escritorio)
+Selección de nivel->Partida: Atras()
+
+Selección de nivel->Nivel 1: Nivel 1()
+Nivel 1->Menú: Menú Principal()
+Selección de nivel->Nivel 2: Nivel 2()
+Nivel 2->Menú: Menú Principal()
+
+Nivel 1->Game Over: Perder()
+Nivel 2->Game Over: Perder()
+
+Game Over->Selección de nivel: Reintentar()
+Game Over->Menú: Menú Principal()
+
+
+
+https://www.websequencediagrams.com/

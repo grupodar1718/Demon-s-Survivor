@@ -1,0 +1,98 @@
+br{
+	line-height:200%;	
+}
+
+#playground{
+    padding: 0;
+    margin: auto;
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#bjugar, #bcreditos{
+	display:block;
+    margin: auto;
+    width: 250px;
+    height: 80px;
+    position: relative;
+   
+}
+
+#contBotones{
+	height: 400px;
+	width:400px;
+	position: fixed;
+	top: 30%;
+	left: 37%;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+#boton1, #boton2, #bOpciones{	
+	width:250px;
+	height: 80px;	
+	position:relative;
+	margin:auto;
+	top:23%;
+}
+
+#botonIdioma{	
+	width:80px;
+	height: 60px;	
+	position:relative;
+	margin:auto;
+}
+
+#bspain, #bengland, #bsoundOn, #bsoundOff{	
+	width:80px;
+	height: 60px;	
+	position:relative;
+	margin:auto;
+	left:17%
+}
+
+#autores{
+	position:absolute;
+	left:75%;
+	top:95%;
+}
+
+#b1p, #b2p, #bvolver{	
+	width:250px;
+	height: 80px;	
+	position:relative;
+	margin:auto;
+	top:23%;
+}
+
+#b1jugador, #b2jugadores{
+	display:block;
+    margin: auto;
+    width: 250px;
+    height: 80px;
+    position: relative;   
+}
+
+#bregresar{	
+	width:120px;
+	height: 100px;	
+	position:relative;
+	margin:auto;
+	left:26%
+}
+
+#controller{
+    padding: 0;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    bottom: 5%;
+    left: 35%;
+}
+
+
