@@ -1,0 +1,592 @@
+br{
+	line-height:200%;	
+}
+
+#playground{
+    padding: 0;
+    margin: auto;
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	border-radius: 25px;
+	border:25px solid #1C1C1C;
+	border-image: url(borde.png) 35 round;
+}
+
+#bjugar, #binstrucciones, #bpuntuaciones, #bcreditos{
+	display:block;
+    margin: auto;
+    width: 250px;
+    height: 80px;
+    position: relative;
+   
+}
+
+#contBotones{
+	height: 400px;
+	width:400px;
+	position: fixed;
+	top: 27%;
+	left: 37%;
+	
+}
+
+#contenedorMain{
+	height: 540px;
+	width:330px;
+	position: fixed;
+	top: 32%;
+	left: 37.8%;
+	background: rgba(0, 0, 0, 0.5);	
+	border-radius: 25px;
+	border:20px solid #1C1C1C;
+	border-image: url(borde.png) 40 round;	
+}
+
+#boton1, #boton2, #boton3, #boton4{	
+	width:250px;
+	height: 80px;	
+	position:relative;
+	margin:auto;
+	top:23%;
+}
+
+#bOpciones{
+	width:250px;
+	height: 80px;	
+	position:relative;
+	margin:auto;
+	top:87%;	
+}
+
+#bspain, #bengland, #bsoundOn, #bsoundOff{	
+	width:80px;
+	height: 60px;	
+	position:relative;
+	margin:auto;
+	left:17%;
+}
+
+#autores{
+	position:absolute;
+	left:75%;
+	top:95%;
+}
+
+#contenedorNumero{
+	height: 340px;
+	width:300px;
+	position: fixed;
+	top: 33%;
+	left: 38.5%;
+	background: rgba(0, 0, 0, 0.5);	
+	border-radius: 25px;
+	border:20px solid #1C1C1C;
+	border-image: url(borde.png) 40 round;	
+}
+
+#b1p, #b2p, #bvolver{	
+	width:250px;
+	height: 80px;	
+	position:relative;
+	margin:auto;
+	top:23%;
+}
+
+#b1jugador, #b2jugadores, #bregresar{
+	display:block;
+    margin: auto;
+    width: 250px;
+    height: 80px;
+    position: relative;   
+}
+
+#titulo{
+	display:block;
+    margin: auto;
+    width: 900px;
+    height: 124px;
+    position: absolute;
+	top:15%;
+	left:25%;	
+}
+
+#numJ{
+	display:block;
+    margin: auto;
+    width: 900px;
+    height: 124px;
+    position: absolute;
+	top:18%;
+	left:25%;	
+}
+
+#bpause{
+	width:80px;
+	height: 60px;	
+	position:absolute;
+	margin:auto;
+	left:88%;
+	top:2%;
+}
+
+#interfaz{
+	margin: auto;
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#contComienzo{
+	height: 300px;
+	width:500px;
+	position: absolute;
+	top: 20%;
+	left: 19%;
+}
+
+#bcomenzar{
+	display:block;
+    margin: auto;
+    width: 280px;
+    height: 95px;
+    position: absolute;
+	top:65%;
+	left:25%;
+}
+
+#level{
+	display:block;
+    margin: auto;
+    width: 450px;
+    height: 150px;
+    position: absolute;
+	top:10%;
+	right:4%;
+}
+
+#intPause{
+	margin: auto;
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;	
+}
+
+#pausa{
+	display:block;
+    margin: auto;
+    width: 450px;
+    height: 150px;
+    position: absolute;
+	top:10%;
+	left:22%;		
+}
+
+#breiniciar, #bsalir, #bv, #bvolverscore{
+	display:block;
+    margin: auto;
+    width: 260px;
+    height: 85px;
+    position: relative;
+	top:25%;
+	left:1%;
+}
+
+#divreiniciar, #divsalir, #divvolver{	
+	height:100px;	
+	position:relative;
+	margin:auto;
+	top:23%;
+}
+
+#reiniciar{
+	display:block;
+    margin: auto;
+	width: 420px;
+    height: 100px;
+    position: absolute;
+	top:30%;
+	left:23%;
+}
+
+#salir{
+	display:block;
+    margin: auto;
+	width: 320px;
+    height: 85px;
+    position: absolute;
+	top:30%;
+	left:30%;
+}
+
+#punt{
+	display:block;
+    margin: auto;
+	width: 360px;
+    height: 100px;
+    position: absolute;
+	top:27%;
+	left:28%;	
+}
+
+#divconfirmar{		
+	position:relative;
+	margin:auto;
+	top:38%;
+	left:2%;
+}
+
+#bsi, #bno, #bsisalir{	
+	width:140px;
+	height: 100px;	
+	margin:auto;
+	position:relative;
+	left:26%;
+	padding-left: 25px;
+}
+
+#divgameover{		
+	position:relative;
+	margin:auto;
+	top:80%;
+}
+
+#breintentarover, #bsalirover, #bpuntuacionesover, #breiniciarcompleted, #bsalircompleted, #bnextcompleted{
+    margin: auto;
+    width: 220px;
+    height: 72px;
+    position: relative;
+	left:7%;
+	padding-left: 10px;
+}
+
+#bestscore{
+	display:block;
+    margin: auto;
+    width: 750px;
+    height: 150px;
+    position: absolute;
+	top:10%;
+	left:3%;
+}
+
+#divvolverscore{
+	height:100px;	
+	position:relative;
+	margin:auto;
+	top:70%;	
+}
+
+#levelcomplete{
+	display:block;
+    margin: auto;
+    width: 650px;
+    height: 150px;
+    position: absolute;
+	top:10%;
+	left:11%;		
+}
+
+#divscoreMain{	
+	position:absolute;
+	margin:auto;
+	top:15%;
+	left:27%;
+}
+
+#divcreditsMain{	
+	position:absolute;
+	margin:auto;
+	top:7%;
+	left:32%;
+}
+
+#divinstMain{	
+	position:absolute;
+	margin:auto;
+	top:7%;
+	left:32%;
+}
+
+#bestscoreMain{
+    margin: auto;
+    width: 820px;
+    height: 130px;
+    position: absolute;
+}
+
+#creditsMain{
+    margin: auto;
+    width: 620px;
+    height: 130px;
+    position: absolute;
+}
+
+#instMain{
+    margin: auto;
+    width: 620px;
+    height: 130px;
+    position: absolute;
+}
+
+#divvolverscoreMain{
+	height:100px;	
+	position:absolute;
+	margin:auto;
+	top:78%;
+	left:42%;
+}
+
+#divvolvercreditsMain{
+	height:100px;	
+	position:absolute;
+	margin:auto;
+	top:85%;
+	left:42%;
+}
+
+#divvolverinstMain{
+	height:100px;	
+	position:absolute;
+	margin:auto;
+	top:85%;
+	left:42%;
+}
+
+#textoCreditos{
+	text-align:center;
+	width:600px;
+	position:absolute;
+	margin:auto;
+	top:20%;
+	left:33%;
+}
+
+#contEquipo{
+	height:150px;	
+	position:absolute;
+	margin:auto;
+	top:28%;
+	left:30%;
+}
+
+#raul, #dario{
+	margin: auto;
+    width: 184px;
+    height: 184px;
+    position: relative;
+}
+
+#adrian{
+	margin: auto;
+    width: 220px;
+    height: 184px;
+    position: relative;
+}
+
+#divRaul{
+	margin: auto;
+    width: 800px;
+    height: 50px;
+    position: relative;
+	top:5%;
+	left:5%;
+}
+
+#divDario{
+	margin: auto;
+    width: 900px;
+    height: 50px;
+    position: relative;
+	top:40%;
+	left:5%;
+}
+
+#divAdrian{
+	margin: auto;
+    width: 900px;
+    height: 50px;
+    position: relative;
+	top:75%;
+	left:5%;
+}
+
+#raulFuente, #darioFuente, #adrianFuente{
+	color: Coral;
+}
+
+#textoCreditos2{
+	text-align:center;
+	width:600px;
+	position:absolute;
+	margin:auto;
+	top:76%;
+	left:33%;
+}
+
+#divreglas{
+	position:absolute;
+    width: 850px;
+    height: 500px;
+	float:left;
+	top:22%;
+	left:3%;
+	border-radius: 25px;
+	border:20px solid #1C1C1C;
+	border-image: url(borde.png) 40 round;	
+	background: rgba(0, 0, 0, 0.5);	
+}
+
+#divcontroles{
+	position:absolute;
+    width: 850px;
+    height: 500px;
+	float:right;
+	top:22%;
+	left:50%;
+	border-radius: 25px;
+	border:20px solid #1C1C1C;
+	border-image: url(borde.png) 40 round;	
+	background: rgba(0, 0, 0, 0.5);	
+}
+
+#reglas, #controles{
+	margin: auto;
+    width: 262px;
+    height: 82px;
+    position: absolute;
+	left:34%;
+}
+
+#listaReglas{
+	position:relative;
+	top:13%;
+	left:5%;
+}
+
+#life, #shield, #velocity{
+	margin: auto;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+#coin{
+	margin: auto;
+    width: 70px;
+    height: 70px;
+	position: relative;
+}
+
+#enemy{
+	margin: auto;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+#div1jugador{
+	position: relative;
+	top:15%;
+	left:5%;
+	width:100px;
+}
+
+#jugador1{
+	margin: auto;
+    width: 320px;
+    height: 80px; 
+	position: relative;
+	left:10%;
+}
+
+#controles1{
+	position: relative;	
+	top:60%;
+	left:35%;
+}
+
+#div2jugador{
+	position: relative;
+	left:55%;
+	bottom:35%;
+	width:100px;
+}
+
+#jugador2{
+	margin: auto;
+    width: 320px;
+    height: 80px; 
+	position: relative;
+	left:10%;
+}
+
+#controles2{
+	position: relative;	
+	left:45%;
+}
+
+#divpausa{
+	position: relative;
+	width:600px;
+	height: 200px; 
+	bottom:43%;
+}
+
+#controlPausa{
+    width: 260px;
+    height: 60px; 
+	position: relative;
+	left:50%;
+}
+
+#botonPausa{
+    width: 120px;
+    height: 100px;
+    position: relative;	
+	top:50%;
+	right:5%;
+}
+
+#keySpace{
+	width: 200px;
+    height: 100px;
+    position: relative;
+	top:50%;	
+	right:8%;
+}
+
+#keyP{
+	position:relative;
+	left:90%;
+	top:4%;
+}
+
+p{
+	font-family: Carousel;
+	text-shadow: 3px 2px black;
+	color:goldenRod;
+}
+
+html {
+    cursor: url(cursor.png), auto;	
+}
+
+@font-face {
+        font-family: "Carousel";
+        src: url("Carousel.ttf") format("truetype");
+}
+
+

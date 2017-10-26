@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Demon's Survivor</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="shortcut icon" type="image/png" href="..\JuegoWeb\Botones\favicon.png"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+	</head>
+
+	<body id="cuerpo" background="background6.jpg">
+	
+		<img id="titulo" src="..\JuegoWeb\Botones\titulo.png">
+		<div id="contenedorMain">
+			<div id="contBotones">
+				<div id="boton1">
+					<a href="ElegirNumJugador.html?ES" style="cursor:url(cursorPointer.png), pointer">
+					<img id="bjugar" src="..\JuegoWeb\Botones\bjugar.png">
+					</a>
+				</div>
+				<br>
+				<div id="boton2">
+					<img id="binstrucciones" src="..\JuegoWeb\Botones\binstrucciones.png" style="cursor:url(cursorPointer.png), pointer">
+				</div>
+				<br>
+				<div id="boton3">
+					<img id="bpuntuaciones" src="..\JuegoWeb\Botones\bpunt.png" style="cursor:url(cursorPointer.png), pointer">
+				</div>
+				<br>
+				<div id="boton4">
+					<img id="bcreditos" src="..\JuegoWeb\Botones\bcreditos.png" style="cursor:url(cursorPointer.png), pointer">
+				</div>
+				<br>
+			</div>
+			<div id="bOpciones">
+				<img id="bengland" src="..\JuegoWeb\Botones\bengland.png" style="cursor:url(cursorPointer.png), pointer">
+				<img id="bsoundOff" src="..\JuegoWeb\Botones\bsoundOff.png" style="cursor:url(cursorPointer.png), pointer">
+			</div>		
+		</div>
+		<footer id="autores">Copyright © Raúl Caño, Darío González y Adrián Soriano.</footer>
+		
+		<script>
+			$(document).ready(function(){
+				var parameters = location.search.substring(1).split("&").toString();
+				
+				if(parameters ==="EN"){
+					english();
+				}				
+				else{
+					spanish();
+				}
+				
+				$("#bengland").click(function(){
+					var src = ($(this).attr('src') === "Botones/bengland.png") ? english() : spanish();
+					$(this).attr('src', src);					
+				});		
+
+				function english(){
+					$('#bengland').attr('src',"Botones/bspain.png");
+					$('#bjugar').attr('src',"Botones/bplay.png");
+					$('#binstrucciones').attr('src',"Botones/binstructions.png");
+					$('#bpuntuaciones').attr('src',"Botones/bscor.png");
+					$('#bcreditos').attr('src',"Botones/bcredits.png");
+					$("a[href='ElegirNumJugador.html?ES']").attr('href', 'ElegirNumJugador.html?EN');
+					 
+					 
+					history.pushState(null, '', '?EN');
+				}
+				
+				function spanish(){
+					$('#bengland').attr('src',"Botones/bengland.png");
+					$('#bjugar').attr('src',"Botones/bjugar.png");
+					$('#binstrucciones').attr('src',"Botones/binstrucciones.png");
+					$('#bpuntuaciones').attr('src',"Botones/bpunt.png");
+					$('#bcreditos').attr('src',"Botones/bcreditos.png");
+					$("a[href='ElegirNumJugador.html?EN']").attr('href', 'ElegirNumJugador.html?ES');
+					history.pushState(null, '', '?ES');					
+				}
+
+				$("#bpuntuaciones").click(function(){
+					parameters = location.search.substring(1).split("&").toString();
+					$('#contenedorMain, #titulo').hide();
+					
+					if(parameters ==="ES"){
+						$("#cuerpo").append('<div id="divscoreMain"><img id="bestscoreMain" src="Botones/mejorespuntuaciones.png"/></div>');
+						//poner puntuaciones
+						$("#cuerpo").append('<div id="divvolverscoreMain"><img id="bvolverscoreMain" src="Botones/bvolver.png" style="cursor:url(cursorPointer.png), pointer"/></div>');
+					}
+					else{
+						$("#cuerpo").append('<div id="divscoreMain"><img id="bestscoreMain" src="Botones/bestscores.png"/></div>');
+						//poner puntuaciones
+						$("#cuerpo").append('<div id="divvolverscoreMain"><img id="bvolverscoreMain" src="Botones/breturn.png" style="cursor:url(cursorPointer.png), pointer"/></div>');
+					}
+				});
+
+				$("#cuerpo").on('click','#bvolverscoreMain', function(){
+					$("#bvolverscoreMain, #divvolverscoreMain, #divscoreMain, #bestsocreMain").remove();			
+						$('#contenedorMain, #titulo').show();				
+				});
+
+				$("#bcreditos").click(function(){
+					parameters = location.search.substring(1).split("&").toString();
+					$('#contenedorMain, #titulo').hide();
+					
+					if(parameters ==="ES"){
+						$("#cuerpo").append('<div id="divcreditsMain"><img id="creditsMain" src="Botones/creditos.png"/></div>');
+						$("#cuerpo").append('<div id="divvolvercreditsMain"><img id="bvolvercreditsMain" src="Botones/bvolver.png" style="cursor:url(cursorPointer.png), pointer"/></div>');
+						$("#cuerpo").append('<div id="textoCreditos"><p><font size="5">Este juego ha sido creado por alumnos del grado en Diseño y Desarrollo de Videojuegos. El equipo de trabajo está compuesto por:</font></p></div>');
+						$("#cuerpo").append('<div id="contEquipo"><div id="divRaul"><p id="raulFuente"><font size="6"><img id="raul" src="Botones/raul.gif" align="middle"/>Raúl Caño Arévalo</font></p></div><div id="divDario"><p id="darioFuente"><font size="6">Darío González Fernández<img id="dario" src="Botones/dario.gif" align="middle"/></font></p></div><div id="divAdrian"><p id="adrianFuente"><font size="6"><img id="adrian" src="Botones/adrian.gif" align="middle"/>Adrián Soriano Valencia</font></p></div></div>');
+						$("#cuerpo").append('<div id="textoCreditos2"><p><font size="5">CONTACTO: grupoclasedar@gmail.com</font></p></div>');
+					}
+					else{
+						$("#cuerpo").append('<div id="divcreditsMain"><img id="creditsMain" src="Botones/credits.png"/></div>');
+						$("#cuerpo").append('<div id="divvolvercreditsMain"><img id="bvolvercreditsMain" src="Botones/breturn.png" style="cursor:url(cursorPointer.png), pointer"/></div>');
+						$("#cuerpo").append('<div id="textoCreditos"><p><font size="5">This game has been created by Design and Development of Videogames degree students. The work team is composed by:</font></p></div>');
+						$("#cuerpo").append('<div id="contEquipo"><div id="divRaul"><p id="raulFuente"><font size="6"><img id="raul" src="Botones/raul.gif" align="middle"/>Raúl Caño Arévalo</font></p></div><div id="divDario"><p id="darioFuente"><font size="6">Darío González Fernández<img id="dario" src="Botones/dario.gif" align="middle"/></font></p></div><div id="divAdrian"><p id="adrianFuente"><font size="6"><img id="adrian" src="Botones/adrian.gif" align="middle"/>Adrián Soriano Valencia</font></p></div></div>');
+						$("#cuerpo").append('<div id="textoCreditos2"><p><font size="5">CONTACT: grupoclasedar@gmail.com</font></p></div>');
+					}					
+				});
+				
+				$("#cuerpo").on('click','#bvolvercreditsMain', function(){
+					$("#divcreditsMain, #divvolvercreditsMain, #creditsMain, #volvercreditsMain, #textoCreditos, #textoCreditos2, #contEquipo, #divRaul, #divDario, #divAdrian, #raulFuente, #darioFuente, #adrianFuente, #raul, #dario, #adrian").remove();			
+						$('#contenedorMain, #titulo').show();				
+				});
+				
+				$("#binstrucciones").click(function(){
+					parameters = location.search.substring(1).split("&").toString();
+					$('#contenedorMain, #titulo').hide();
+					
+					if(parameters ==="ES"){
+						$("#cuerpo").append('<div id="divinstMain"><img id="instMain" src="Botones/instrucciones.png"/></div>');
+						$("#cuerpo").append('<div id="divvolverinstMain"><img id="bvolverinstMain" src="Botones/bvolver.png" style="cursor:url(cursorPointer.png), pointer"/></div>');
+						$("#cuerpo").append('<div id="divreglas"><img id="reglas" src="Botones/reglas.png"/><ul id="listaReglas"><li type="circle"><p><font size="5"><img id="life" src="Botones/heart.gif" align="middle"/>  3 vidas por nivel</li><li type="circle"><p><font size="5">Esquiva a las oleadas de enemigos para sobrevivir   <img id="enemy" src="Botones/enemy.gif" align="middle"/></li><li type="circle"><p><font size="5"><img id="coin" src="Botones/coin2.gif" align="middle"/>  Consigue monedas para sumar puntos</li><li type="circle"><p><font size="5">Protección para un ataque recibido     <img id="shield" src="Botones/shield.png" align="middle"/></li><li type="circle"><p><font size="5"><img id="velocity" src="Botones/boots.png" align="middle"/>  Velocidad aumentada hasta recibir daño</li><ul></div>');
+						$("#cuerpo").append('<div id="divcontroles"><img id="controles" src="Botones/controles.png"/><div id="div1jugador"><img id="jugador1" src="Botones/jugador1.png"/><img id="controles1" src="Botones/controles1.png"/></div><div id="div2jugador"><img id="jugador2" src="Botones/jugador2.png"/><img id="controles2" src="Botones/controles2.png"/></div></div>');
+						$("#divcontroles").append('<div id="divpausa"><img id="controlPausa" src="Botones/pausa.png"/><img id="botonPausa" src="Botones/bpause.png"/><img id="keySpace" src="Botones/keySpace.png"/><img id="keyP" src="Botones/keyP.png"/></div>');
+					}
+					else{
+						$("#cuerpo").append('<div id="divinstMain"><img id="instMain" src="Botones/instructions.png"/></div>');
+						$("#cuerpo").append('<div id="divvolverinstMain"><img id="bvolverinstMain" src="Botones/breturn.png" style="cursor:url(cursorPointer.png), pointer"/></div>');
+						$("#cuerpo").append('<div id="divreglas"><img id="reglas" src="Botones/rules.png"/><ul id="listaReglas"><li type="circle"><p><font size="5"><img id="life" src="Botones/heart.gif" align="middle"/>  3 lives per level</li><li type="circle"><p><font size="5">Dodge the waves of enemies to survive  <img id="enemy" src="Botones/enemy.gif" align="middle"/></li><li type="circle"><p><font size="5"><img id="coin" src="Botones/coin2.gif" align="middle"/>  Get coins to score points</li><li type="circle"><p><font size="5">Protection for one hit     <img id="shield" src="Botones/shield.png" align="middle"/></li><li type="circle"><p><font size="5"><img id="velocity" src="Botones/boots.png" align="middle"/>  Increased speed until receiving damage</li><ul></div>');
+						$("#cuerpo").append('<div id="divcontroles"><img id="controles" src="Botones/controls.png"/><div id="div1jugador"><img id="jugador1" src="Botones/player1.png"/><img id="controles1" src="Botones/controles1.png"/></div><div id="div2jugador"><img id="jugador2" src="Botones/player2.png"/><img id="controles2" src="Botones/controles2.png"/></div></div>');
+						$("#divcontroles").append('<div id="divpausa"><img id="controlPausa" src="Botones/pause.png"/><img id="botonPausa" src="Botones/bpause.png"/><img id="keySpace" src="Botones/keySpace.png"/><img id="keyP" src="Botones/keyP.png"/></div>');
+					}
+				});
+				
+				$("#cuerpo").on('click','#bvolverinstMain', function(){
+					$("#divinstMain, #divvolverinstMain, #divreglas, #divcontroles").remove();			
+						$('#contenedorMain, #titulo').show();				
+				});
+				
+			});	
+		</script>
+		
+	</body>
+	
+</html>

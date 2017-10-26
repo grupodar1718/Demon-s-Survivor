@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Demon's Survivor</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="shortcut icon" type="image/png" href="..\JuegoWeb\Botones\favicon.png"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+	</head>
+
+	<body background="background.jpg">
+		
+		<img id="numJ" src="..\JuegoWeb\Botones\numJugadores.png">
+		<div id="contenedorNumero">
+		<div id="contBotones">
+			<div id="b1p">
+				<a href="UnJugador.html?ES" style="cursor:url(cursorPointer.png), pointer">
+				<img id="b1jugador" src="..\JuegoWeb\Botones\b1jugador.png">
+				</a>
+			</div>
+			<br>
+			<div id="b2p">
+				<a href="DosJugadores.html?ES" style="cursor:url(cursorPointer.png), pointer">
+				<img id="b2jugadores" src="..\JuegoWeb\Botones\b2jugadores.png">
+				</a>
+			</div>
+			<br>
+			<div id="bvolver">
+				<a href="Main.html?ES" style="cursor:url(cursorPointer.png), pointer">
+				<img id="bregresar" src="..\JuegoWeb\Botones\batras.png">
+				</a>
+			</div>
+		</div>
+		</div>
+		<footer id="autores">Copyright © Raúl Caño, Darío González y Adrián Soriano.</footer>
+		
+		<script>
+			$(document).ready(function(){
+			
+				var parameters = location.search.substring(1).split("&").toString();
+				console.log(parameters);
+				if(parameters ==="EN"){
+					english();
+				}
+				
+				else{
+					spanish();
+				}
+
+				function english(){
+					$('#numJ').attr('src',"Botones/numberPlayers.png");
+					$('#b1jugador').attr('src',"Botones/b1player.png");
+					$('#b2jugadores').attr('src',"Botones/b2players.png");
+					$('#bregresar').attr('src',"Botones/bback.png");
+					$("a[href='UnJugador.html?ES']").attr('href', 'UnJugador.html?EN');
+					$("a[href='DosJugadores.html?ES']").attr('href', 'DosJugadores.html?EN');
+					$("a[href='Main.html?ES']").attr('href', 'Main.html?EN');
+				}
+				
+				function spanish(){
+					$('#numJ').attr('src',"Botones/numJugadores.png");
+					$('#b1jugador').attr('src',"Botones/b1jugador.png");
+					$('#b2jugadores').attr('src',"Botones/b2jugadores.png");
+					$('#bregresar').attr('src',"Botones/batras.png");
+					$("a[href='UnJugador.html?ES']").attr('href', 'UnJugador.html?ES');
+					$("a[href='DosJugadores.html?ES']").attr('href', 'DosJugadores.html?ES');
+					$("a[href='Main.html?EN']").attr('href', 'Main.html?ES');
+				}				
+				
+			});	
+		</script>
+	</body>
+	
+</html>
