@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="estilo.css">
 		<link rel="shortcut icon" type="image/png" href="..\JuegoWeb\Botones\favicon.png"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		
+		<audio class="sound" src="song.mp3" autoplay loop></audio>
 	</head>
 
 	<body id="cuerpo" background="background6.jpg">
@@ -63,9 +63,7 @@
 					$('#binstrucciones').attr('src',"Botones/binstructions.png");
 					$('#bpuntuaciones').attr('src',"Botones/bscor.png");
 					$('#bcreditos').attr('src',"Botones/bcredits.png");
-					$("a[href='ElegirNumJugador.html?ES']").attr('href', 'ElegirNumJugador.html?EN');
-					 
-					 
+					$("a[href='ElegirNumJugador.html?ES']").attr('href', 'ElegirNumJugador.html?EN'); 	 
 					history.pushState(null, '', '?EN');
 				}
 				
@@ -77,6 +75,21 @@
 					$('#bcreditos').attr('src',"Botones/bcreditos.png");
 					$("a[href='ElegirNumJugador.html?EN']").attr('href', 'ElegirNumJugador.html?ES');
 					history.pushState(null, '', '?ES');					
+				}
+				
+				$("#bsoundOff").click(function(){
+					var src = ($(this).attr('src') === "Botones/bsoundOn.png") ? sonidoON() : sonidoOFF();
+					$(this).attr('src', src);					
+				});	
+				
+				function sonidoON(){
+						$("#bsoundOff").attr('src', "Botones/bsoundOff.png");
+						$(".sound").prop('muted', false);
+				}
+				
+				function sonidoOFF(){
+						$("#bsoundOff").attr('src', "Botones/bsoundOn.png");
+						$(".sound").prop('muted', true);	
 				}
 
 				$("#bpuntuaciones").click(function(){
