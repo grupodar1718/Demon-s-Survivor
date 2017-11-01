@@ -1,0 +1,205 @@
+/*start basics*/
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#bg {
+    /* The image used */
+    background-image: url("background6.jpg");
+
+    /* Full height */
+    height: 100%; 
+	width: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+}
+
+p{
+	font-family: Carousel;
+	text-shadow: 3px 2px black;
+	color:goldenRod;
+}
+
+@font-face {
+        font-family: "Carousel";
+        src: url("Carousel.ttf") format("truetype");
+}
+
+/*basics hasta aqui*/
+
+#contenedorTitulo{
+	width: 100%;
+	top:5%;
+	position:relative;
+}
+
+#imagenTitulo{
+	width: 55%;
+	display:block;
+	margin:auto;
+	position:relative;
+}
+
+#contenedorMain{
+	height: 60%;
+	width: 20%;
+	position: relative;
+	padding-top: 5%;
+
+	margin: auto;
+}
+
+#contenedorBotones{
+	width: 100%;
+	height:80%;
+	
+	position: relative;
+	margin:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+#boton1, #boton2, #boton3, #boton4{	
+	width:60%;
+	position:relative;
+	margin:auto;
+	
+	
+}
+
+#bjugar, #binstrucciones, #bpuntuaciones, #bcreditos{
+    width: 100%;
+	
+}
+
+#bOpciones{
+	width: 100%;
+	height:20%;
+	
+	position: relative;
+	padding-top: 5%;
+	margin:auto;
+	display:flex;
+	justify-content:center;
+}
+
+#boton5, #boton6{
+
+	width: 100%;
+	position: relative;
+	margin: auto;
+}
+
+#bspain, #bengland{	
+	width:45%;
+	height: 65%;
+	position: relative;
+
+	margin-left:50%;
+    
+
+}
+
+#bsoundOn, #bsoundOff{	
+	width:45%;
+	height: 65%;
+	position: relative;
+
+	margin-right:50%;
+
+}
+
+/*Creditos*/
+#divcreditsMain{	
+	position:relative;
+	margin:auto;
+	top:7%;
+}
+
+#contenedorCreditos{
+	height:100%;
+	width:40%;
+	position: relative;
+	margin:auto;
+	padding-top: 5%;
+}
+
+#textoCreditos{
+	text-align:center;
+	width:100%;
+	position:relative;
+	margin:auto;
+}
+
+#contEquipo{
+	height:100%;
+	position:relative;
+	margin:auto;
+	padding-top:1%;
+	
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+#divRaul{
+	margin: auto;
+    width: 50%;
+    position: relative;
+}
+
+#divDario{
+	margin: auto;
+    width: 50%;
+    position: relative;
+}
+
+#raul, #dario{
+	margin: auto;
+    width: 30%;
+    height: 30%;
+    position: relative;
+}
+
+#divAdrian{
+	margin: auto;
+    width: 50%;
+    position: relative;
+}
+
+#adrian{
+	margin: auto;
+    width: 30%;
+    height: 30%;
+    position: relative;
+}
+
+#raulFuente, #darioFuente, #adrianFuente{
+	color: Coral;
+}
+
+#textoCreditos2{
+	text-align:center;
+	width:600px;
+	position:absolute;
+	margin:auto;
+	top:76%;
+	left:33%;
+}
+
+#divvolvercreditsMain{
+	height:100px;	
+	position:absolute;
+	margin:auto;
+	top:85%;
+	left:42%;
+}
