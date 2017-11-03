@@ -43,14 +43,32 @@
 		
 		<script>
 			$(document).ready(function(){
+				
 				var parameters = location.search.substring(1).split("&").toString();
+				console.log(parameters);
+				console.log(localStorage.getItem('music'));
+				localStorage.clear();
+				
+				var music;
 				
 				if(parameters ==="EN"){
 					english();
-				}				
+				}
+				else if(parameters ==="ESOFF"){
+					spanish();
+					$("#bsoundOff").attr('src', "Botones/bsoundOn.png");
+					$(".sound").prop('muted', true);
+					localStorage.setItem('music', false);
+				}
+				else if(parameters ==="ENOFF"){
+					english();
+					$("#bsoundOff").attr('src', "Botones/bsoundOn.png");
+					$(".sound").prop('muted', true);
+					localStorage.setItem('music', false);
+				}
 				else{
 					spanish();
-				}
+				}			
 				
 				$("#bengland").click(function(){
 					var src = ($(this).attr('src') === "Botones/bengland.png") ? english() : spanish();
@@ -85,11 +103,15 @@
 				function sonidoON(){
 						$("#bsoundOff").attr('src', "Botones/bsoundOff.png");
 						$(".sound").prop('muted', false);
+						localStorage.setItem('music', true);
+						console.log(localStorage.getItem('music'));
 				}
 				
 				function sonidoOFF(){
 						$("#bsoundOff").attr('src', "Botones/bsoundOn.png");
-						$(".sound").prop('muted', true);	
+						$(".sound").prop('muted', true);
+						localStorage.setItem('music', false);
+						console.log(localStorage.getItem('music'));
 				}
 
 				$("#bpuntuaciones").click(function(){
