@@ -1,0 +1,592 @@
+/*start basics*/
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#bg {
+    /* The image used */
+    background-image: url("background6.jpg");
+
+    /* Full height */
+    height: 100%; 
+	width: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+}
+
+p{
+	font-family: Carousel;
+	text-shadow: 3px 2px black;
+	color:goldenRod;
+}
+
+@font-face {
+        font-family: "Carousel";
+        src: url("Carousel.ttf") format("truetype");
+}
+
+#footAutores{
+	width:100%;
+	margin-top: 22%;
+	position: absolute;
+}
+
+#autores{
+	position:relative;
+	color:white;
+	text-align: right;
+}
+
+/*basics hasta aqui*/
+
+#contenedorTitulo{
+	width: 100%;
+	top:5%;
+	position:relative;
+}
+
+#imagenTitulo{
+	width: 55%;
+	display:block;
+	margin:auto;
+	position:relative;
+}
+
+#contenedorMain{
+	height: 60%;
+	width: 20%;
+	position: relative;
+	padding-top: 5%;
+
+	margin: auto;
+}
+
+#contenedorBotones{
+	width: 100%;
+	height:80%;
+	
+	position: relative;
+	margin:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+#boton1, #boton2, #boton3, #boton4{	
+	width:60%;
+	position:relative;
+	margin:auto;
+	
+	
+}
+
+#bjugar, #binstrucciones, #bpuntuaciones, #bcreditos{
+    width: 100%;
+	
+}
+
+#bOpciones{
+	width: 100%;
+	height:20%;
+	
+	position: relative;
+	padding-top: 5%;
+	margin:auto;
+	display:flex;
+	justify-content:center;
+}
+
+#boton5, #boton6{
+
+	width: 100%;
+	position: relative;
+	margin: auto;
+}
+
+#bspain, #bengland{	
+	width:45%;
+	height: 65%;
+	position: relative;
+
+	margin-left:50%;
+    
+
+}
+
+#bsoundOn, #bsoundOff{	
+	width:45%;
+	height: 65%;
+	position: relative;
+
+	margin-right:50%;
+
+}
+
+/***************************************************************************************************************/
+/************************************************Creditos*******************************************************/
+/***************************************************************************************************************/
+
+#divcreditsMain{	
+	position:relative;
+	margin:auto;
+	top:5%;
+}
+
+#creditsMain{
+	width: 65%;
+	display:block;
+	margin:auto;
+	position:relative;
+}
+
+#contenedorCreditos{
+	height:auto;
+	width:40%;
+	position: relative;
+	margin:auto;
+	padding-top: 1%;
+}
+
+#textoCreditos{
+	text-align:center;
+	width:100%;
+	position:relative;
+	margin:auto;
+	font-size: 1.3vw;
+}
+
+#contEquipo{
+	height:auto;
+	position:relative;
+	margin:auto;
+	padding-top:1%;
+	
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+#divRaul{
+	margin: auto;
+    width: 100%;
+    position: relative;
+	
+	display:flex;
+	justify-content:center;
+}
+
+
+#raulImagen{
+	height:100%;
+	position:relative;
+	margin:auto;
+	
+}
+
+#raul{
+	position: relative;
+	width: 45%;
+	/*height: 45%;*/
+	margin: auto;
+}
+
+#divDario{
+	margin: auto;
+    width: 100%;
+    position: relative;
+	
+	display:flex;
+	justify-content:center;
+}
+
+#darioImagen{
+	height:100%;
+	position:relative;
+	margin:auto;
+	text-align: right;
+	
+}
+
+#dario{
+	position: relative;
+	width: 65%;
+	/*height: 65%;*/
+	margin: auto;
+	margin-right: 0;
+}
+
+#divAdrian{
+	margin: auto;
+    width: 100%;
+    position: relative;
+	
+	display:flex;
+	justify-content:center;
+}
+
+#adrianImagen{
+	height:100%;
+	position:relative;
+	margin:auto;
+	
+}
+
+#adrian{
+	position: relative;
+	width: 90%;
+	/*height: 90%;*/
+	margin: auto;
+}
+
+#raulFuente, #darioFuente, #adrianFuente{
+	color: Coral;
+	font-size: 2vw;
+	text-align:center;
+}
+
+#textoCreditos2{
+	text-align:center;
+	width:100%;
+	position:relative;
+	margin:auto;
+	font-size: 1.3vw;
+}
+
+#divvolvercreditsMain{
+	height:7%;	
+	position:relative;
+	margin:auto;
+	padding-bottom: 3%;
+}
+
+#bvolvercreditsMain{
+	height:100%;
+	margin:auto;
+	position:relative;
+}
+
+/***************************************************************************************************************/
+/*********************************************Instrucciones*****************************************************/
+/***************************************************************************************************************/
+
+#divinstMain{	
+	position:relative;
+	margin:auto;
+	top:5%;
+}
+
+#instMain{
+    width: 65%;
+	display:block;
+	margin:auto;
+	position:relative;
+}
+
+#contenedorInstrucciones{
+	height:auto;
+	width:100%;
+	position: relative;
+	margin:auto;
+	padding-top: 1%;
+	
+	display:flex;
+	justify-content:center;
+}
+
+#divreglas{
+	position:relative;
+    width: 100%;
+	/*float:left;
+	top:22%;
+	left:3%;*/
+}
+
+#imgReglas{
+	position: relative;
+	width: 40%;
+	margin: auto;
+}
+
+#divcontroles{
+	position:relative;
+    width: 100%;
+    /*height: 500px;
+	float:right;
+	top:22%;
+	left:50%;*/
+}
+
+#imgControles{
+	position: relative;
+	width: 50%;
+	margin: auto;
+}
+
+#reglas, #controles{
+	margin: auto;
+    width: 100%;
+}
+
+/********************Reglas***********************/
+
+#listaReglas{
+	position:relative;
+	margin: auto;
+	font-size: 1.3vw;
+}
+
+/*#life, #shield, #velocity{
+	width: 7%;
+	margin: auto;
+	position: relative;
+	vertical-align:middle;
+}*/
+
+#life, #coin, #velocity{
+	width: 7%;
+	margin: auto;
+	position: relative;
+	vertical-align:middle;
+	padding-right: 3%;
+}
+
+/*#coin{
+	width: 7%;
+	margin: auto;
+	position: relative;
+	vertical-align:middle;
+}*/
+
+#enemy, #shield{
+	width: 7%;
+	margin: auto;
+	position: relative;
+	vertical-align:middle;
+	padding-left: 3%;
+}
+
+#pItemsLista{
+	font-family: Carousel;
+	text-shadow: 3px 2px black;
+	color:goldenRod;
+	text-align:center;
+}
+
+/********************Controles***********************/
+#jugadores{
+	height:auto;
+	width:100%;
+	position: relative;
+	margin:auto;
+	padding-top: 5%;
+	
+	display:flex;
+	justify-content:center;
+}
+
+#div1jugador, #div2jugador{
+	position:relative;
+    width: 100%;
+}
+
+#jugador1, #jugador2{
+    width: 100%; 
+	position: relative;
+	margin: auto;
+}
+
+#controles1, #controles2{
+	display:block;
+	position: relative;	
+	width: 30%;
+	margin:auto;
+}
+
+#imgJugador1, #imgJugador2{
+	position: relative;
+	width: 50%;
+	margin: auto;
+}
+
+#imgControles1, #imgControles2{
+	
+	position: relative;
+	width: 100%;
+	margin: auto;
+}
+
+/*****Pausa*****/
+
+
+#divpausa{
+	position: relative;
+	width:100%;
+}
+
+#divImgPausa{
+	position:relative;
+    width: 100%;
+}
+
+#controlPausa{
+	display:block;
+	position: relative;
+	width: 25%;
+	margin: auto;
+}
+
+#divTeclasPausa{
+	height:auto;
+	width:100%;
+	position: relative;
+	margin:auto;
+	padding-top: 1%;
+	
+	display:flex;
+	justify-content:center;
+}
+
+#divBotonPausa, #divSpace, #divKeyP{
+	width:100%;
+	position: relative;
+	margin:auto;
+}
+
+#botonPausa{
+	display:block;
+    width: 50%;
+    position: relative;	
+	margin:auto;
+	padding-left: 50%;
+}
+
+#keySpace{
+	display:block;
+	width: 80%;
+    position: relative;
+	margin: auto;
+}
+
+#keyP{
+	display:block;
+	width: 50%;
+    position: relative;
+	margin: auto;
+	padding-right: 50%;
+}
+
+/*Volver de instrucciones*/
+#divvolverinstMain{
+	width:100%;	
+	position:relative;
+	margin:auto;
+}
+
+#bvolverinstMain{
+	display:block;
+	width: 12%;
+    position: relative;
+	margin: auto;
+	padding-bottom:5%;
+}
+
+/*****************************************Puntuaciones*****************************************/
+#divscoreMain{	
+	position:relative;
+	margin:auto;
+}
+
+#bestscoreMain{
+    width: 65%;
+	display:block;
+	margin:auto;
+	position:relative;
+}
+
+#divvolverscoreMain{
+	width:100%;	
+	position:relative;
+	margin:auto;
+}
+
+#bvolverscoreMain{
+	display:block;
+	width: 12%;
+    position: relative;
+	margin: auto;
+	padding-bottom:5%;
+}
+
+
+/***************************************************************************************************************/
+/***************************************************************************************************************/
+/***************************************************************************************************************/
+/*******************************************Seleccion Jugador***************************************************/
+/***************************************************************************************************************/
+/***************************************************************************************************************/
+/***************************************************************************************************************/
+
+
+#bgSeleccionarJugadores{
+	    /* The image used */
+    background-image: url("background.jpg");
+
+    /* Full height */
+    height: 100%; 
+	width: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+}
+
+#divNumJugadores{
+	width: 100%;
+	padding-top: 5%;
+	position:relative;
+}
+
+#numJ{
+	width: 55%;
+	display:block;
+	margin:auto;
+	position:relative;
+}
+
+#contBotones{
+	height: 35%;
+	width: 20%;
+	
+	position: relative;
+	margin:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	padding-bottom: 10%;
+}
+
+#b1p, #b2p, #bvolver{
+	width:60%;
+	position:relative;
+	margin:auto;
+}
+
+#b1jugador, #b2jugadores, #bregresar{
+	width:100%;
+	position:relative;
+	margin:auto;
+	display:block;
+}
