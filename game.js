@@ -51,6 +51,7 @@ var shieldActive = false;
 var firstShield = false;
 
 var playing = true;
+var pause = false;
 var begin = false;
 var lock = 0;
 
@@ -307,54 +308,56 @@ function gameLoop () {
 
   window.requestAnimationFrame(gameLoop);
 
-  var ctx = canvas.getContext("2d");
-  ctx.clearRect(0,0,800,600);
-  ctx.drawImage(fondoImg, 0, 0);
+  if(pause == false){
 
-  if(begin == true && lock == 0){
-    beginGame();
-    lock += 1;
-  }
- 
-  if(playing == true){
+    var ctx = canvas.getContext("2d");
+    ctx.clearRect(0,0,800,600);
+    ctx.drawImage(fondoImg, 0, 0);
 
-    checkPosition(pj);
-    for(var i = 0; i < skeletons.length; i++){
-      if(skeletons[i] != null){
-        checkPosition(skeletons[i]);
-      }
+    if(begin == true && lock == 0){
+      beginGame();
+      lock += 1;
     }
-    for(var i = 0; i < vampires.length; i++){
-      if(vampires[i] != null){
-        checkPosition(vampires[i]);
+   
+    if(playing == true){
+
+      checkPosition(pj);
+      for(var i = 0; i < skeletons.length; i++){
+        if(skeletons[i] != null){
+          checkPosition(skeletons[i]);
+        }
       }
-    }  
-    for(var i = 0; i < demons.length; i++){
-      if(demons[i] != null){
-        checkPosition(demons[i]);
+      for(var i = 0; i < vampires.length; i++){
+        if(vampires[i] != null){
+          checkPosition(vampires[i]);
+        }
+      }  
+      for(var i = 0; i < demons.length; i++){
+        if(demons[i] != null){
+          checkPosition(demons[i]);
+        }
+      } 
+      for(var i = 0; i < fireMobs.length; i++){
+        if(fireMobs[i] != null){
+          fireMobs[i].count += 1;
+          checkPosition(fireMobs[i]);
+        }
       }
-    } 
-    for(var i = 0; i < fireMobs.length; i++){
-      if(fireMobs[i] != null){
-        fireMobs[i].count += 1;
-        checkPosition(fireMobs[i]);
-      }
+
+      pj.update();
+      pj.render();
+
+      checkShields();
+      checkBoots();
+      checkCoins();
+      checkFires();
+      checkSkeletons();
+      checkVampires();
+      checkDemons();
+      checkfireMobs();
+      
     }
-
-    pj.update();
-    pj.render();
-
-    checkShields();
-    checkBoots();
-    checkCoins();
-    checkFires();
-    checkSkeletons();
-    checkVampires();
-    checkDemons();
-    checkfireMobs();
-    
   }
-  
 }
 
 ///////////////////////////////////////////////////////////////////////FUNCIONES DE CHEQUEO DE TODAS LAS COLISIONES ENTRE PJS Y EL MAPA
@@ -929,31 +932,45 @@ pjImg.addEventListener("load", gameLoop);
 
 function beginGame(){
     setInterval(function() {
+      if(pause ==  false){
         createSkeleton();
+      }
     }, 500);
 
     setInterval(function() {
+      if(pause ==  false){
         createVampire();
+      }
     }, 2000);
 
     setInterval(function() {
+      if(pause ==  false){
         createDemon();
+      }
     }, 4000);
 
     setInterval(function() {
+      if(pause ==  false){
         createfireMob();
+      }
     }, 4000);
 
     setInterval(function() {
+      if(pause ==  false){
         createCoin();
+      }
     }, 5000);
 
     setInterval(function() {
+      if(pause ==  false){
         createBoot();
+      }
     }, 10000);
 
     setInterval(function() {
+      if(pause ==  false){
         createShield();
+      }
     }, 15000);
 
     countDown();
@@ -966,6 +983,7 @@ toMinute=0;
 toSecond=45;
 
 function countDown(){
+  if(pause == false)
     toSecond=toSecond-1;
     if(toSecond<0)
     {
@@ -1041,7 +1059,8 @@ $(document).ready(function(){
 			$("#interfaz").append('<div id="divreiniciar"><img id="breiniciar" src="Interfaz/brestart.png" style="cursor:url(Interfaz/cursorPointer.png), pointer"/></div>');
 			$("#interfaz").append('<div id="divsalir"><img id="bsalir" src="Interfaz/bexit.png" style="cursor:url(Interfaz/cursorPointer.png), pointer"/></div>');
 			$("#interfaz").append('<div id="divvolver"><img id="bv" src="Interfaz/breturn.png" style="cursor:url(Interfaz/cursorPointer.png), pointer"/></div>');
-			}					
+			}
+    pause = true;					
 		});
 		
 		//Botón reiniciar
